@@ -1,0 +1,13 @@
+<%= form_tag do %>
+	<%= label_tag :substring %>
+	<div onkeyup = 'Search("fan", "result", "3", "4");'> 
+		<%= text_field_tag :substring, '', :id => "query" %>
+	</div> 
+<% end %>
+
+<% @users.each do |element| %>
+	<p><%= link_to element.first_name + element.last_name, controller: "photos", action: "index", id: element.id %>
+	</p>
+<% end %>
+
+<div id="result"></div>

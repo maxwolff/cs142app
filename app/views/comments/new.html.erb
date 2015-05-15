@@ -1,0 +1,8 @@
+
+<%= image_tag @thisPhoto.file_name %> 
+
+<%= form_tag("/comments/create/" + @id , :method => "post") do %>
+<%= label_tag(:comment, "Enter something:") %>
+<%= text_field_tag(:comment) %>
+<%= submit_tag("Submit") %>
+<% end %>

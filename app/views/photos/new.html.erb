@@ -1,0 +1,4 @@
+<button type="button" class="btn btn-default navbar-btn" ><%= form_for(:photo, :url => "/photos/create") do |form| %>
+ <%= form.file_field(:photo) %>
+ <%= submit_tag("Submit") %>
+<% end %></button> 

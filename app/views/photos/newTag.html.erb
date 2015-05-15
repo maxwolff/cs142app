@@ -1,0 +1,28 @@
+ <button type="button" class="btn btn-default " ><%= link_to "Back", controller: "users", action: "index"%>
+	</button>
+
+	<% divname = @photo.file_name %>
+	<div id = <%= divname %> >
+		<%= image_tag @photo.file_name %> 
+		<div id = "rectangle"> </div>
+	</div>
+
+
+
+ 
+<%= form_tag :controller => :photos,:action => :newTag, :id => params[:id] do %>
+	<%= hidden_field_tag :xcord %>
+	<%= hidden_field_tag :ycord %>
+	<%= hidden_field_tag :deltaX %>
+	<%= hidden_field_tag :deltaY %>
+	<%= select_tag "userId", options_from_collection_for_select(User.all, "id", "first_name"), prompt: "Who are you tagging?" %>
+	<%= submit_tag 'Tag' %> 
+<% end %>
+
+
+  <script type="text/javascript">
+  //<![CDATA[
+      var tagger = new Tagger( "<%= divname %>" , "rectangle",  "xcord",  "ycord" ,  "deltaX",  "deltaY");
+      // 
+  //]]>
+  </script>

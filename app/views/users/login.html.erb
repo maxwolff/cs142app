@@ -1,0 +1,13 @@
+<%= form_tag("post_login", :method => "post") do %>
+	<%= label_tag(:login, "Enter something:") %>
+	<%= text_field_tag(:login) %>
+	<%= label_tag(:password, "Enter Password:") %>
+	<%= text_field_tag(:password) %>
+	<%= submit_tag("Submit") %>
+<% end %>
+
+<%=  link_to "Register", controller: "users", action: "new" %>
+
+<% if flash[:error] %>
+ <p><%= flash[:error] %></p>
+<% end %>

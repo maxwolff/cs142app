@@ -1,0 +1,18 @@
+<%= form_tag("/users/create" , :method => "post") do %>
+	<%= label_tag(:first, "First Name:") %>
+	<%= text_field_tag(:first, "First Name:") %>
+
+	<%= label_tag(:last, "Last Name:") %>
+	<%= text_field_tag(:last, "Last Name:") %>
+
+	<%= label_tag(:login, "Login:") %>
+	<%= text_field_tag(:login, "Login:") %>
+
+	<%= label_tag(:password1, "Password:") %>
+	<%= text_field_tag(:password1, "Password:") %>
+
+	<%= label_tag(:password2, "Retype:") %>
+	<%= text_field_tag(:password2, "Retype:") %>
+
+	<%= submit_tag("Submit") %>
+<% end %>

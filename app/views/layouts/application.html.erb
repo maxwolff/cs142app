@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+ lang="en">
+	<head>
+	  <title>Max Demo</title>
+	  <%= stylesheet_link_tag  'application', media: 'all' %>
+	  <%= csrf_meta_tags %>
+	  <%= javascript_include_tag 'application' %>
+	</head>
+	<body>
+		<div id = "header">
+			<h3>Max Wolff
+				<button type="button" class="btn btn-default navbar-btn" ><% if session[:user] == nil %>
+					<%= link_to "Login", controller: "users", action:"login" %>
+				</button>
+					<% else %>
+					<% user = session[:user]%>
+					<%=  link_to "Hi " + user.first_name + "! Logout" , controller: "users", action: "logout" %>
+				<% end %> 
+			</h3>
+		</div>
+		<br>
+		<div class = "container">
+			<div class = "col-lg-10 col-lg-offset-1">
+				<div class = "jumbotron">
+
+					
+						<%= yield %>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	
+	</body>
+</html>
