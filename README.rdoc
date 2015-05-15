@@ -1,28 +1,10 @@
-== README
+photo sharing app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+rails server, open localhost:3000/users
 
-Things you may want to cover:
+supports adding new commments, photos, and logins with password salting
 
-* Ruby version
+tagger and search javascript scripts are still buggy 
 
-* System dependencies
+* Ruby version : 2.1.4 rails version 4.1.7
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
