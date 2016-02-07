@@ -1,10 +1,8 @@
-photo sharing app.
+I wrote a photo sharing webapp in ruby on rails for  CS 142, a web development class at Stanford. You can create a profile, tag your friends in your pictures, and add comments to people's walls. Login with a password that is salted for extra security. 
+
+Instructions: 
 
 rails server, open localhost:3000/users
-
-supports adding new commments, photos, and logins with password salting
-
-tagger and search javascript scripts are still buggy 
 
 * Ruby version : 2.1.4 rails version 4.1.7
 
